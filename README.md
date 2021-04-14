@@ -5,7 +5,7 @@ Docker images for generating and serving a [Sculpin static site](https://sculpin
 ## Usage
 
     # Install the site dependencies.
-    docker run --rm -v $(pwd):/app -w /app composer composer install
+    docker run --rm -v $(pwd):/app composer composer install
 
     # Run a "sculpin" CLI command.
     docker run --rm -v $(pwd):/app opdavies/sculpin
