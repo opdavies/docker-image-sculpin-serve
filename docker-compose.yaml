@@ -1,0 +1,9 @@
+version: '2.4'
+
+services:
+  sculpin:
+    image: opdavies/sculpin-serve
+    volumes:
+      - .:/app
+    ports:
+      - 8000:8000
