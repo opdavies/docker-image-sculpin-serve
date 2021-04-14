@@ -1,4 +1,4 @@
-FROM php:7.4-cli-alpine
+FROM php:7.4-cli-alpine AS sculpin
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
@@ -6,4 +6,10 @@ ENV PATH=/app/bin:/app/vendor/bin:$PATH
 
 WORKDIR /app
 
-CMD ["sculpin", "generate", "--server", "--watch"]
+ENTRYPOINT ["sculpin"]
+
+###
+
+FROM sculpin AS sculpin-serve
+
+CMD ["generate", "--server", "--watch"]

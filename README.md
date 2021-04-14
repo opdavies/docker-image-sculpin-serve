@@ -1,7 +1,14 @@
 # docker-image-sculpin-serve
 
-A Docker image for installing dependencies for a [Sculpin-generated static site](https://sculpin.io) and serving it using Sculpin's `generate` command.
+A Docker image for generating and serving a [Sculpin static site](https://sculpin.io).
 
 ## Usage
 
-    docker run -p 8000:8000 -v $(pwd):/app opdavies/sculpin-serve
+    # Install the site dependencies.
+    docker run --rm -v $(pwd):/app -w /app composer composer install
+
+    # Run a "sculpin" CLI command.
+    docker run --rm -v $(pwd):/app opdavies/sculpin
+
+    # Generate and serve the Sculpin site.
+    docker run --rm -p 8000:8000 -v $(pwd):/app opdavies/sculpin-serve
