@@ -1,6 +1,6 @@
 # docker-image-sculpin-serve
 
-A Docker image for generating and serving a [Sculpin static site](https://sculpin.io).
+Docker images for generating and serving a [Sculpin static site](https://sculpin.io).
 
 ## Usage
 
