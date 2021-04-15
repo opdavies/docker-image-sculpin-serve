@@ -2,6 +2,8 @@
 
 Docker images for generating and serving a [Sculpin static site](https://sculpin.io).
 
+Inspired by [BretFisher/jekyll-serve](https://github.com/BretFisher/jekyll-serve).
+
 ## Usage
 
     # Install the site dependencies.
