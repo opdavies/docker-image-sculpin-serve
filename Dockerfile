@@ -6,7 +6,9 @@ ENV PATH=/app/bin:/app/vendor/bin:$PATH
 
 WORKDIR /app
 
-ENTRYPOINT ["sculpin"]
+COPY docker-entrypoint.sh /usr/local/bin
+
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 ###
 
