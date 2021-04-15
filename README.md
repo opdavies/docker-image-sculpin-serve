@@ -6,9 +6,6 @@ Inspired by [BretFisher/jekyll-serve](https://github.com/BretFisher/jekyll-serve
 
 ## Usage
 
-    # Install the site dependencies.
-    docker run --rm -v $(pwd):/app composer composer install
-
     # Run a "sculpin" CLI command.
     docker run --rm -v $(pwd):/app opdavies/sculpin
 
