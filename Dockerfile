@@ -6,6 +6,9 @@ ENV PATH=/app/bin:/app/vendor/bin:$PATH
 
 WORKDIR /app
 
+RUN adduser --disabled-password sculpin \
+  && chown sculpin:sculpin -R /app
+
 COPY docker-entrypoint.sh /usr/local/bin
 
 ENTRYPOINT ["docker-entrypoint.sh"]

@@ -7,7 +7,7 @@ Inspired by [BretFisher/jekyll-serve](https://github.com/BretFisher/jekyll-serve
 ## Usage
 
     # Run a "sculpin" CLI command.
-    docker run --rm -v $(pwd):/app opdavies/sculpin
+    docker run --rm --user sculpin -v $(pwd):/app opdavies/sculpin
 
     # Generate and serve the Sculpin site.
-    docker run --rm -p 8000:8000 -v $(pwd):/app opdavies/sculpin-serve
+    docker run --rm --user sculpin -p 8000:8000 -v $(pwd):/app opdavies/sculpin-serve
