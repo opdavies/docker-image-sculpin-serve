@@ -1,4 +1,6 @@
-FROM php:7.4-cli-alpine AS sculpin
+ARG php_version=8.1
+
+FROM php:${php_version}-cli-alpine AS sculpin
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
